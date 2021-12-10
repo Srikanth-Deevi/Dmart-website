@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/@popperjs/core@2">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+	<!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="icon" href="data:image/png;base64,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">
+	<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+	<style>
+		.justify{text-align: justify;}
+		.himg{height:450px;width: 100%;}
+		a.active{background-color:rgb(122, 236, 132);}
+		ul > li > a:hover{ background-color:rgb(122, 236, 132);}
+	</style>
+</head>
+<body>
+	
+	<div class="navbar fixed-top navbar-expand-lg border shadow fixed navbar-light bg-white p-4">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="Home Page.html"><img src="data:image/png;base64,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"></img></a>
+		</div>
+		<div class="navbar-collapse collapse">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0 p-2 ">
+				<li class="nav-item me-1"><a class="active nav-link" href="Home Page.html">Home</a></li>
+				<li class="nav-item me-1"><a class="nav-link" href="Gallery.html">Gallery</a></li>
+				<li class="nav-item me-1"><a class="nav-link" href="About.html">About_us</a></li>
+				<li class="nav-item me-1 "><a class="nav-link" href="Contact.html">Contact_us</a></li>
+				<li class="nav-item me-1"><a class="nav-link" href="Feedback.html">Feedback</a></li>
+			</ul>
+		</div>
+	</div>
+<br><br>
+	<div>
+		<marquee class="p-3 bg-success animated fadeInDown text-white mt-5" behavior="" direction="ltr">Dear Customers - Our offers / promotions and customer care contact details are published on our websites (<a class="text-white-50" href="www.dmartindia.com">www.dmartindia.com </a>and <a class="text-white-50" href="www.dmart.in">www.dmart.in</a>), DMart Ready App and at our Stores. Please do not call any unknown numbers or click on any unknown links or similar looking links. Please check the website name carefully. These could be potential phishing websites.</marquee>
+	</div>
+	<div id="carouselExampleControls" class="carousel slide container-fluid justify-content-center " data-bs-ride="carousel">
+		<div class="carousel-inner">
+		  <div class="carousel-item active">
+			<img src="https://couponswala.com/blog/wp-content/uploads/2021/06/microsoftteams-image-62-.jpg" class="border shadow-lg rounded border-success w-100 himg" alt="...">
+		  </div>
+		  <div class="carousel-item">
+			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS__wdKDw6KSUUNlmTL86TFJ9FM-SFijBrPhQ&usqp=CAU" class="border shadow-lg rounded border-success w-100 himg" alt="...">
+		  </div>
+		  <div class="carousel-item">
+			<img src="https://i.ytimg.com/vi/JKgkfNhpzp0/hqdefault.jpg" class="border shadow-lg rounded border-success w-100 himg" alt="...">
+		  </div>
+		  <div class="carousel-item">
+			<img src="https://couponswala.com/blog/wp-content/uploads/2021/06/DMart-Online-Shopping-1-1024x576.jpg" class="border shadow-lg rounded border-success w-100 himg" alt="...">
+		  </div>
+		  <div class="carousel-item">
+			<img src="https://us.123rf.com/450wm/nazarkru/nazarkru2011/nazarkru201100049/159881200-online-shopping-e-commerce-pay-and-online-shopping-mobile-shopping-concept-vector-illustration-.jpg?ver=6" class="border shadow-lg rounded border-success w-100 himg" alt="...">
+		  </div>
+		</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+		  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		  <span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+		  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		  <span class="visually-hidden">Next</span>
+		</button>
+	  </div>
+	<br>
+	<br>
+	<div class="container">
+		<p class="justify"><b>Online shopping </b>is a form of electronic commerce which allows consumers to directly buy goods or services from a seller over the Internet using a web browser or a mobile app. Consumers find a product of interest by visiting the website of the retailer directly or by searching among alternative vendors using a shopping search engine, which displays the same product's availability and pricing at different e-retailers. As of 2020, customers can shop online using a range of different computers and devices, including desktop computers, laptops, tablet computers and smartphones.<br><br>An online shop evokes the physical analogy of buying products or services at a regular "bricks-and-mortar" retailer or shopping center; the process is called business-to-consumer (B2C) online shopping.
+			 When an online store is set up to enable businesses to buy from another businesses, the process is called business-to-business (B2B) online shopping. A typical online store enables the customer to browse the firm's range of products and services, view photos or images of the products, along with information about the product specifications, features and prices.
+		</p>
+	</div>
+	<h3 class="text-center text-success text-opacity-75 text-decoration-underline">New Stories</h3>
+	<div class="container">
+		<div class="container row justify-content-center">
+			<div class="card col-lg-3 m-3 shadow">
+				<div class="card-body">
+					<div class="card-title">
+						<h3 class="text-center text-success">Koramangala</h3>
+						<p class="text-sm text-success">Bengaluru, Karnataka</p>
+						<img class="img-fluid" src="https://content3.jdmagicbox.com/comp/bangalore/t4/080pxx80.xx80.170311132503.d3t4/catalogue/d-mart-ramamurthy-nagar-bangalore-supermarkets-3d87toj.jpg" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="card col-lg-3 m-3 shadow">
+				<div class="card-body">
+					<div class="card-title">
+						<h3 class="text-center text-success">Goregaon</h3>
+						<p class="text-sm text-success">Mumbai, Maharashtra</p>
+						<img class="img-fluid" src="https://www.retail4growth.com/public/thumbs/news/2020/10/5281/Home-DMart_440_851.jpg" alt="">
+					</div>
+				</div>
+			</div><div class="card col-lg-3 m-3 shadow">
+				<div class="card-body">
+					<div class="card-title">
+						<h3 class="text-center text-success">Karol Bagh</h3>
+						<p class="text-sm text-success">New Delhi, Delhi</p>
+						<img class="img-fluid" src="https://www.dmartindia.com/static/media/photo-1534723452862-4c874018d66d.4328707c.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	<div class="container">
+		<h3 class="text-center mt-2 text-success text-opacity-75 "><u>STORE CATEGORIES</u></h3>
+		<div class="row mt-4 mb-3">
+			<a class="col-3" href="https://www.dmart.in/searchResult?searchTerm=daily%20essential"><img class="shadow-lg border border-1 border-success img-fluidw-100 h-100 rounded" src="https://www.dmartindia.com/static/media/DAILY%20ESSENTIALS.e203cb84.jpg" alt="daily essential"></a>
+			<a class="col-3" href="https://www.dmart.in/category/grocery-aesc-grocerycore"><img class="shadow-lg border border-1 border-success img-fluidw-100 h-100 rounded" src="https://www.dmartindia.com/static/media/GROCERY%20&%20STAPLES.88be12a7.jpg" alt="grocery"></a>
+			<a class="col-3" href=""><img class="shadow-lg border border-2 border-success img-fluid w-100 h-100 rounded" src="https://www.dmartindia.com/static/media/LADIES%20GARMENTS.8db50d48.jpg" alt="womens clothing"></a>
+			<a class="col-3" href="https://www.dmart.in/searchResult?searchTerm=mens%20clothing"><img class="shadow-lg border border-1 border-success img-fluid w-100 h-100 rounded" src="https://www.dmartindia.com/static/media/apparel-men.309fe2a5.jpg" alt="mens clothing"></a>
+		</div>
+		<div class="row">
+			<p class=" col-3 text-center fw-bold text-success"><a class="text-success" href="https://www.dmart.in/searchResult?searchTerm=daily%20essential">DAILY ESSENTIALS</a></p>
+			<p class=" col-3 text-center fw-bold text-success"> <a class="text-success" href="https://www.dmart.in/category/grocery-aesc-grocerycore"> GROCERY & STAPLES</a> </p>
+			<p class=" col-3 text-center fw-bold text-success"><a class="text-success" href="">WOMEN'S APPAREL</a></p>
+			<p class=" col-3 text-center fw-bold text-success"><a class="text-success" href="https://www.dmart.in/searchResult?searchTerm=mens%20clothing"> MEN'S APPAREL</a></p>
+		</div>
+		<div class="row mt-2 mb-3">
+			<a class="col-3" href=""><img class="shadow-lg border border-1 border-success img-fluid w-100 h-100 rounded" src="https://www.dmartindia.com/static/media/footwear.c6c8abf9.jpg" alt="footwear"></a>
+			<a class="col-3" href="https://www.dmart.in/searchResult?searchTerm=toys%20and%20games"><img class="shadow-lg border border-1 border-success img-fluid w-100 h-100 rounded" src="https://www.dmartindia.com/static/media/toys.9758d08b.jpeg" alt="toys& games">
+			<a class="col-3" href="https://www.dmart.in/searchResult?searchTerm=plastic%20items"><img class="shadow-lg border border-1 border-success img-fluid w-100 h-100 rounded" src="https://www.dmartindia.com/static/media/plastics.d88cb67f.jpeg" alt="plastic items"></a>
+			<a class="col-3" href="https://www.dmart.in/searchResult?searchTerm=fruits%20and%20vegetables"><img class="shadow-lg border border-1 border-success img-fluid h-100 w-100 rounded" src="https://www.dmartindia.com/static/media/FRUITS%20&%20VEGETABLES.ecbcaabc.jpg" alt="fruits & vegetables"></a>
+        </div>
+		<div class="row">
+			<p class=" col-3 text-center fw-bold text-success"><a class="text-success" href=""></a> FOOTWEAR</p>
+			<p class=" col-3 text-center fw-bold text-success"><a class="text-success" href="https://www.dmart.in/searchResult?searchTerm=toys%20and%20games">TOYS & GAMES</a></p>
+			<p class=" col-3 text-center fw-bold text-success"><a class="text-success" href="https://www.dmart.in/searchResult?searchTerm=plastic%20items"> PLASTIC CONTAINERS</a></p>
+			<p class=" col-3 text-center fw-bold text-success"><a class="text-success" href="https://www.dmart.in/searchResult?searchTerm=fruits%20and%20vegetables">FRUITS & VEGETABLES</a> </p>
+		</div>
+        <div class="row mt-2 mb-3">
+			<a class="col-3" href="https://www.dmart.in/searchResult?searchTerm=Dairy%20and%20products"><img class="shadow-lg border border-2 border-success img-fluid w-100 h-100 rounded" src="https://www.dmartindia.com/static/media/DAIRY%20&%20FROZEN.41fe6246.jpg" alt="Dairy & Products"></a>
+			<a class="col-3" href="https://www.dmart.in/searchResult?searchTerm=Damrt%20Brands"><img class="shadow-lg border border-1 border-success img-fluid w-100 h-100 rounded" src="https://www.dmartindia.com/static/media/DMART%20BRANDS.d0b4c9ca.jpg" alt="Dmart Brands"></a>
+			<a class="col-3" href="https://www.dmart.in/searchResult?searchTerm=luggage%20bags"><img class="shadow-lg border border-1 border-success img-fluid w-100 h-100 rounded" src="https://www.dmartindia.com/static/media/luggage.4918bf6c.jpg" alt="luggage"></a>
+			<a class="col-3" href="https://www.dmart.in/searchResult?searchTerm=kids"><img class="shadow-lg border border-1 border-success img-fluid w-100 h-100 rounded" src="https://www.dmartindia.com/static/media/kids-clothing.2a98cc19.jpg" alt="kids clothing"></a>
+    	</div>
+		<div class="row">
+			<p class=" col-3 text-center fw-bold text-success"><a class="text-success" href="https://www.dmart.in/searchResult?searchTerm=Dairy%20and%20products">DAIRY & FROZEN</a> </p>
+			<p class=" col-3 text-center fw-bold text-success"><a class="text-success" href="https://www.dmart.in/searchResult?searchTerm=Damrt%20Brands">DMART BRANDS</a> </p>
+			<p class=" col-3 text-center fw-bold text-success"><a class="text-success" href="https://www.dmart.in/searchResult?searchTerm=luggage%20bags">GLUGGAGE</a> </p>
+			<p class=" col-3 text-center fw-bold text-success"><a class="text-success" href="https://www.dmart.in/searchResult?searchTerm=kids"> KID'S APPAREL</a></p>
+		</div>
+	</div>
+
+	<div class="footer footer-default footer-fixed p-3 bg-dark w-100">
+        <p class="text-white">&copy; Contact us</p>
+        <a class="m-5 p-3 me-lg-5" href="https://www.facebook.com/Avenue-Supermarts" target="new"><i class="fab fa-facebook-square"> Facebook</i></a>
+        <a class="p-2 me-lg-5" href="mailto:suggestion@dmartindia.com" target="new"><i class="fa fa-envelope-square"> Gmail</i></a>
+        <a href="https://www.linkedin.com/company/avenue-supermarts-pvt-ltd" target="new"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
+</body>
+</html>
